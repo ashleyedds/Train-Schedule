@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+
+<html lang="en-us">
+
+<head>
+
+    <meta charset="UTF-8">
+    <title>Track That Train</title>
+
+    <!-- BOOTSTRAP -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=News+Cycle" rel="stylesheet">
+
+    <!-- FIREBASE -->
+    <script src="https://www.gstatic.com/firebasejs/4.9.0/firebase.js"></script>
+
+    <!-- MOMENT JS -->
+    <script src="https://cdn.jsdelivr.net/npm/moment@2.20.1/moment.min.js"></script>
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="jumbotron">
+
+            <h1 class="header">Train Schedule</h1>
+            <h3 class="header">Don't see your train?</h3>
+            <h4 class="header">Add it to the schedule by providing details in the form below.</h4>
+
+        </div>
+        <!--jumbotron-->
+
+        <div class="row">
+
+            <div class="col-xs-12">
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        <h3>Current Trains</h3>
+                    </div>
+
+                    <div class="panel-body">
+                        <table class="table-hover" id="train-table">
+
+                            <thead>
+                                <tr>
+                                    <th>Train Name</th>
+                                    <th> Destination</th>
+                                    <th>Frequency (min)</th>
+                                    <th>Next Arrival</th>
+                                    <th>Minutes Away</th>
+                                </tr>
+                            </thead>
+
+                            <tbody>
+                            </tbody>
+
+                        </table>
+                    </div>
+                    <!--panel body-->
+                </div>
+                <!--panel-->
+            </div>
+            <!--col-->
+        </div>
+        <!--row-->
+
+        <div class="row">
+            <div class="col-xs-12">
+
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        <h3>Add a train</h3>
+                    </div>
+
+                    <div class="panel-body">
+
+                        <form>
+                            <div class="form-group">
+                                <label for="train-name-input">Train Name</label>
+                                <input class="form-control" id="train-name-input" type="text">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="destination-input">Destination</label>
+                                <input class="form-control" id="destination-input" type="text">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="train-time-input">First Train Time (HH:mm - military time)</label>
+                                <input class="form-control" id="train-time-input" type="text">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="frequency-input">Frequency (min)</label>
+                                <input class="form-control" id="frequency-input" type="text">
+                            </div>
+                            <button class="btn btn-primary" id="add-train" type="submit">Submit</button>
+                        </form>
+                    </div>
+                    <!--panel-body-->
+                </div>
+                <!--panel-->
+            </div>
+            <!--col-->
+        </div>
+        <!--row-->
+
+
+    </div>
+    <!--container-->
+
+    <script src="assets/javascript/script.js"></script>
+</body>
+
+</html>
