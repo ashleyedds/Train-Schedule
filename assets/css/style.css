@@ -29,7 +29,14 @@ body {
     letter-spacing: 0.1em;
 }
 
-td {
-    width: 25%;
-    padding-right: 150px;
+#train-name {
+    width: 30%;
+}
+
+#train-dest, #train-freq, #next-train, #minutes-till {
+    width: 20%;
+}
+
+button {
+    margin: 10px;
 }
